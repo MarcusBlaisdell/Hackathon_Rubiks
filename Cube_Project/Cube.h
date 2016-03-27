@@ -23,8 +23,9 @@ public:
     
     void create_cube();
     void print_cube();
+
     void pretty_print();
-    
+    void RotateSide(unsigned int side, bool cw);
 };
 
 

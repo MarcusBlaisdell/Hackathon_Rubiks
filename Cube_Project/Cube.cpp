@@ -3,7 +3,7 @@
 //  Cube_Project
 //
 //  Created by Heidi Lyons on 3/26/16.
-//  Copyright © 2016 Heidi Lyons. All rights reserved.
+//  Copyright ï¿½ 2016 Heidi Lyons. All rights reserved.
 //
 
 #include "Cube.h"
@@ -110,35 +110,6 @@ void Cube::pretty_print()
 
 	cout << endl << endl << endl;
 	cout << "          BACK SIDE                   " << endl;
-
-
-	.___________________.
-		/ \  				 \
-		/ \		   	      \
-		/ \				   \
-		/ \                  \
-		/ \__________________\
-		/ / /
-		/ / /
-		\ / /
-		\ / /
-		\ / /
-		\ / /
-		\ / ___________________ /
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

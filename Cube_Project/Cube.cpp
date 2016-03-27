@@ -9,7 +9,7 @@
 #include "Cube.h"
 #include "Side.h"
 #include <iostream>
-
+#include <time.h>
 using std::cout;
 using std::endl;
 
@@ -646,4 +646,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		this->container[2].set_matrix(0, 0, tmp3_3);
 
 	} // end if side 6
+}
+
+void Cube::randomize()
+{
+	unsigned int noperations = 0;
+	unsigned int side = 0;
+	bool cw = 0;
+	srand(time(NULL));
+	noperations = rand() % 25;
+
+	for (unsigned int n = 0; n < noperations; n++)
+	{
+		side = rand() % 6;
+		cw = rand() % 2;
+		RotateSide(side, cw);
+	}
+
 }

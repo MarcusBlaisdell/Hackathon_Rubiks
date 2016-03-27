@@ -83,14 +83,81 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		tmp2[1] = this->container[side].get_matrix(i, j + 1);
 		tmp2[2] = this->container[side].get_matrix(i, j + 2);
 		
+
 		this->container[side].set_matrix(i, j, tmp1[0]);
-		this->container[side].set_matrix(i, j, tmp1[1]);
-		this->container[side].set_matrix(i, j, tmp1[2]);
-		//wip
+		this->container[side].set_matrix(i, j + 1, tmp1[1]);
+		this->container[side].set_matrix(i, j + 2, tmp1[2]);
+
+		j = 2;
+
+		tmp1[0] = this->container[side].get_matrix(i, j);
+		tmp1[1] = this->container[side].get_matrix(i - 1, j);
+		tmp1[2] = this->container[side].get_matrix(i - 2, j);
+
+		this->container[side].set_matrix(i, j, tmp2[0]);
+		this->container[side].set_matrix(i - 1, j, tmp2[1]);
+		this->container[side].set_matrix(i - 2, j, tmp2[2]);
+
+		i = 0;
+
+		tmp2[0] = this->container[side].get_matrix(i, j);
+		tmp2[1] = this->container[side].get_matrix(i, j - 1);
+		tmp2[2] = this->container[side].get_matrix(i, j - 2);
+
+		this->container[side].set_matrix(i, j, tmp2[0]);
+		this->container[side].set_matrix(i, j - 1, tmp2[1]);
+		this->container[side].set_matrix(i, j - 2, tmp2[2]);
+
+		j = 0;
+
+		this->container[side].set_matrix(i, j, tmp1[0]);
+		this->container[side].set_matrix(i + 1, j, tmp1[1]);
+		this->container[side].set_matrix(i + 2, j, tmp1[2]);
+	}
+	else
+	{
+		int i = 2;
+		int j = 0;
+
+		tmp1[0] = this->container[side].get_matrix(i, j);
+		tmp1[1] = this->container[side].get_matrix(i - 1, j);
+		tmp1[2] = this->container[side].get_matrix(i - 2, j);
+
+		i = 0;
+
+		tmp2[0] = this->container[side].get_matrix(i, j);
+		tmp2[1] = this->container[side].get_matrix(i, j + 1);
+		tmp2[2] = this->container[side].get_matrix(i, j + 2);
+
+
+		this->container[side].set_matrix(i, j, tmp1[0]);
+		this->container[side].set_matrix(i, j + 1, tmp1[1]);
+		this->container[side].set_matrix(i, j + 2, tmp1[2]);
+
+		j = 2;
+
 		tmp1[0] = this->container[side].get_matrix(i, j);
 		tmp1[1] = this->container[side].get_matrix(i + 1, j);
 		tmp1[2] = this->container[side].get_matrix(i + 2, j);
 
+		this->container[side].set_matrix(i, j, tmp2[0]);
+		this->container[side].set_matrix(i + 1, j, tmp2[1]);
+		this->container[side].set_matrix(i + 2, j, tmp2[2]);
 
+		i = 2;
+
+		tmp2[0] = this->container[side].get_matrix(i, j);
+		tmp2[1] = this->container[side].get_matrix(i, j - 1);
+		tmp2[2] = this->container[side].get_matrix(i, j - 2);
+
+		this->container[side].set_matrix(i, j, tmp2[0]);
+		this->container[side].set_matrix(i, j - 1, tmp2[1]);
+		this->container[side].set_matrix(i, j - 2, tmp2[2]);
+
+		j = 0;
+
+		this->container[side].set_matrix(i, j, tmp1[0]);
+		this->container[side].set_matrix(i - 1, j, tmp1[1]);
+		this->container[side].set_matrix(i - 2, j, tmp1[2]);
 	}
 }

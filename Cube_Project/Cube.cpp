@@ -166,6 +166,223 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		this->container[side].set_matrix(i, j, tmp1[0]);
 		this->container[side].set_matrix(i + 1, j, tmp1[1]);
 		this->container[side].set_matrix(i + 2, j, tmp1[2]);
+
+		if (side == 1)
+		{
+			char tmp3_1 = this->container[3].get_matrix(2, 0);
+			char tmp3_2 = this->container[3].get_matrix(2, 1);
+			char tmp3_3 = this->container[3].get_matrix(2, 2);
+
+			char tmp5_1 = this->container[5].get_matrix(0, 0);
+			char tmp5_2 = this->container[5].get_matrix(1, 0);
+			char tmp5_3 = this->container[5].get_matrix(2, 0);
+
+			char tmp4_1 = this->container[4].get_matrix(0, 2);
+			char tmp4_2 = this->container[4].get_matrix(0, 1);
+			char tmp4_3 = this->container[4].get_matrix(0, 0);
+
+			char tmp2_1 = this->container[2].get_matrix(2, 2);
+			char tmp2_2 = this->container[2].get_matrix(1, 2);
+			char tmp2_3 = this->container[2].get_matrix(0, 2);
+
+			this->container[1].set_matrix(2, 0, tmp2_1);
+			this->container[1].set_matrix(2, 1, tmp2_2);
+			this->container[1].set_matrix(2, 2, tmp2_3);
+
+			this->container[5].set_matrix(0, 0, tmp3_1);
+			this->container[5].set_matrix(1, 0, tmp3_2);
+			this->container[5].set_matrix(2, 0, tmp3_3);
+
+			this->container[4].set_matrix(0, 2, tmp5_1);
+			this->container[4].set_matrix(0, 1, tmp5_2);
+			this->container[4].set_matrix(0, 0, tmp5_3);
+
+			this->container[2].set_matrix(2, 2, tmp4_1);
+			this->container[2].set_matrix(1, 2, tmp4_2);
+			this->container[2].set_matrix(0, 2, tmp4_3);
+
+		} // end if side 1
+
+		if (side == 2)
+		{
+			char tmp3_1 = this->container[3].get_matrix(0, 0);
+			char tmp3_2 = this->container[3].get_matrix(1, 0);
+			char tmp3_3 = this->container[3].get_matrix(2, 0);
+
+			char tmp1_1 = this->container[1].get_matrix(0, 0);
+			char tmp1_2 = this->container[1].get_matrix(1, 0);
+			char tmp1_3 = this->container[1].get_matrix(2, 0);
+
+			char tmp4_1 = this->container[4].get_matrix(0, 0);
+			char tmp4_2 = this->container[4].get_matrix(1, 0);
+			char tmp4_3 = this->container[4].get_matrix(2, 0);
+
+			char tmp6_1 = this->container[6].get_matrix(2, 2);
+			char tmp6_2 = this->container[6].get_matrix(1, 2);
+			char tmp6_3 = this->container[6].get_matrix(0, 2);
+
+			this->container[3].set_matrix(0, 0, tmp6_1);
+			this->container[3].set_matrix(1, 0, tmp6_2);
+			this->container[3].set_matrix(2, 0, tmp6_3);
+
+			this->container[1].set_matrix(0, 0, tmp3_1);
+			this->container[1].set_matrix(1, 0, tmp3_2);
+			this->container[1].set_matrix(2, 0, tmp3_3);
+
+			this->container[4].set_matrix(0, 0, tmp1_1);
+			this->container[4].set_matrix(1, 0, tmp1_2);
+			this->container[4].set_matrix(2, 0, tmp1_3);
+
+			this->container[6].set_matrix(2, 2, tmp4_1);
+			this->container[6].set_matrix(1, 2, tmp4_2);
+			this->container[6].set_matrix(0, 2, tmp4_3);
+
+		} // end if side 2
+
+		if (side == 3)
+		{
+			char tmp2_1 = this->container[2].get_matrix(0, 2);
+			char tmp2_2 = this->container[2].get_matrix(0, 1);
+			char tmp2_3 = this->container[2].get_matrix(0, 0);
+
+			char tmp6_1 = this->container[6].get_matrix(0, 2);
+			char tmp6_2 = this->container[6].get_matrix(0, 1);
+			char tmp6_3 = this->container[6].get_matrix(0, 0);
+
+			char tmp5_1 = this->container[5].get_matrix(0, 2);
+			char tmp5_2 = this->container[5].get_matrix(0, 1);
+			char tmp5_3 = this->container[5].get_matrix(0, 0);
+
+			char tmp1_1 = this->container[1].get_matrix(0, 2);
+			char tmp1_2 = this->container[1].get_matrix(0, 1);
+			char tmp1_3 = this->container[1].get_matrix(0, 0);
+
+			this->container[2].set_matrix(0, 2, tmp1_1);
+			this->container[2].set_matrix(0, 1, tmp1_2);
+			this->container[2].set_matrix(0, 0, tmp1_3);
+
+			this->container[6].set_matrix(0, 2, tmp2_1);
+			this->container[6].set_matrix(0, 1, tmp2_2);
+			this->container[6].set_matrix(0, 0, tmp2_3);
+
+			this->container[5].set_matrix(0, 2, tmp6_1);
+			this->container[5].set_matrix(0, 1, tmp6_2);
+			this->container[5].set_matrix(0, 0, tmp6_3);
+
+			this->container[1].set_matrix(0, 2, tmp5_1);
+			this->container[1].set_matrix(0, 1, tmp5_2);
+			this->container[1].set_matrix(0, 0, tmp5_3);
+
+		} // end if side 3
+
+		if (side == 4)
+		{
+			char tmp2_1 = this->container[2].get_matrix(2, 2);
+			char tmp2_2 = this->container[2].get_matrix(2, 1);
+			char tmp2_3 = this->container[2].get_matrix(2, 0);
+
+			char tmp1_1 = this->container[1].get_matrix(2, 2);
+			char tmp1_2 = this->container[1].get_matrix(2, 1);
+			char tmp1_3 = this->container[1].get_matrix(2, 0);
+
+			char tmp5_1 = this->container[5].get_matrix(2, 2);
+			char tmp5_2 = this->container[5].get_matrix(2, 1);
+			char tmp5_3 = this->container[5].get_matrix(2, 0);
+
+			char tmp6_1 = this->container[6].get_matrix(2, 2);
+			char tmp6_2 = this->container[6].get_matrix(2, 1);
+			char tmp6_3 = this->container[6].get_matrix(2, 0);
+
+			this->container[2].set_matrix(2, 2, tmp6_1);
+			this->container[2].set_matrix(2, 1, tmp6_2);
+			this->container[2].set_matrix(2, 0, tmp6_3);
+
+			this->container[1].set_matrix(2, 2, tmp2_1);
+			this->container[1].set_matrix(2, 1, tmp2_2);
+			this->container[1].set_matrix(2, 0, tmp2_3);
+
+			this->container[5].set_matrix(2, 2, tmp1_1);
+			this->container[5].set_matrix(2, 1, tmp1_2);
+			this->container[5].set_matrix(2, 0, tmp1_3);
+
+			this->container[6].set_matrix(2, 2, tmp5_1);
+			this->container[6].set_matrix(2, 1, tmp5_2);
+			this->container[6].set_matrix(2, 0, tmp5_3);
+
+		} // end if side 4
+
+		if (side == 5)
+		{
+			char tmp1_1 = this->container[1].get_matrix(2, 2);
+			char tmp1_2 = this->container[1].get_matrix(1, 2);
+			char tmp1_3 = this->container[1].get_matrix(0, 2);
+
+			char tmp3_1 = this->container[3].get_matrix(2, 2);
+			char tmp3_2 = this->container[3].get_matrix(1, 2);
+			char tmp3_3 = this->container[3].get_matrix(0, 2);
+
+			char tmp6_1 = this->container[6].get_matrix(0, 0);
+			char tmp6_2 = this->container[6].get_matrix(1, 0);
+			char tmp6_3 = this->container[6].get_matrix(2, 0);
+
+			char tmp4_1 = this->container[4].get_matrix(0, 0);
+			char tmp4_2 = this->container[4].get_matrix(1, 0);
+			char tmp4_3 = this->container[4].get_matrix(2, 0);
+
+			this->container[1].set_matrix(2, 2, tmp4_1);
+			this->container[1].set_matrix(1, 2, tmp4_2);
+			this->container[1].set_matrix(0, 2, tmp4_3);
+
+			this->container[3].set_matrix(2, 2, tmp1_1);
+			this->container[3].set_matrix(1, 2, tmp1_2);
+			this->container[3].set_matrix(0, 2, tmp1_3);
+
+			this->container[6].set_matrix(0, 0, tmp3_1);
+			this->container[6].set_matrix(1, 0, tmp3_2);
+			this->container[6].set_matrix(2, 0, tmp3_3);
+
+			this->container[4].set_matrix(0, 0, tmp6_1);
+			this->container[4].set_matrix(1, 0, tmp6_2);
+			this->container[4].set_matrix(2, 0, tmp6_3);
+
+		} // end if side 5
+
+		if (side == 6)
+		{
+			char tmp3_1 = this->container[3].get_matrix(0, 0);
+			char tmp3_2 = this->container[3].get_matrix(0, 1);
+			char tmp3_3 = this->container[3].get_matrix(0, 2);
+
+			char tmp5_1 = this->container[5].get_matrix(0, 2);
+			char tmp5_2 = this->container[5].get_matrix(1, 2);
+			char tmp5_3 = this->container[5].get_matrix(2, 2);
+
+			char tmp4_1 = this->container[4].get_matrix(2, 2);
+			char tmp4_2 = this->container[4].get_matrix(2, 1);
+			char tmp4_3 = this->container[4].get_matrix(2, 0);
+
+			char tmp2_1 = this->container[2].get_matrix(2, 0);
+			char tmp2_2 = this->container[2].get_matrix(1, 0);
+			char tmp2_3 = this->container[2].get_matrix(0, 0);
+
+			this->container[3].set_matrix(0, 0, tmp2_1);
+			this->container[3].set_matrix(0, 1, tmp2_2);
+			this->container[3].set_matrix(0, 2, tmp2_3);
+
+			this->container[5].set_matrix(0, 2, tmp3_1);
+			this->container[5].set_matrix(1, 2, tmp3_2);
+			this->container[5].set_matrix(2, 2, tmp3_3);
+
+			this->container[4].set_matrix(2, 2, tmp5_1);
+			this->container[4].set_matrix(2, 1, tmp5_2);
+			this->container[4].set_matrix(2, 0, tmp5_3);
+
+			this->container[2].set_matrix(2, 0, tmp4_1);
+			this->container[2].set_matrix(1, 0, tmp4_2);
+			this->container[2].set_matrix(0, 0, tmp4_3);
+
+		} // end if side 6
+
 	}
 	else
 	{
@@ -232,21 +449,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		char tmp2_2 = this->container[2].get_matrix(1, 2);
 		char tmp2_3 = this->container[2].get_matrix(0, 2);
 
-		this->container[1].set_matrix(2, 0, tmp2_1);
-		this->container[1].set_matrix(2, 1, tmp2_2);
-		this->container[1].set_matrix(2, 2, tmp2_3);
+		this->container[3].set_matrix(2, 0, tmp5_1);
+		this->container[3].set_matrix(2, 1, tmp5_2);
+		this->container[3].set_matrix(2, 2, tmp5_3);
 
-		this->container[5].set_matrix(0, 0, tmp3_1);
-		this->container[5].set_matrix(1, 0, tmp3_2);
-		this->container[5].set_matrix(2, 0, tmp3_3);
+		this->container[5].set_matrix(0, 0, tmp4_1);
+		this->container[5].set_matrix(1, 0, tmp4_2);
+		this->container[5].set_matrix(2, 0, tmp4_3);
 
-		this->container[4].set_matrix(0, 2, tmp5_1);
-		this->container[4].set_matrix(0, 1, tmp5_2);
-		this->container[4].set_matrix(0, 0, tmp5_3);
+		this->container[4].set_matrix(0, 2, tmp2_1);
+		this->container[4].set_matrix(0, 1, tmp2_2);
+		this->container[4].set_matrix(0, 0, tmp2_3);
 
-		this->container[2].set_matrix(2, 2, tmp4_1);
-		this->container[2].set_matrix(1, 2, tmp4_2);
-		this->container[2].set_matrix(0, 2, tmp4_3);
+		this->container[2].set_matrix(2, 2, tmp3_1);
+		this->container[2].set_matrix(1, 2, tmp3_2);
+		this->container[2].set_matrix(0, 2, tmp3_3);
 
 	} // end if side 1
 
@@ -268,21 +485,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		char tmp6_2 = this->container[6].get_matrix(1, 2);
 		char tmp6_3 = this->container[6].get_matrix(0, 2);
 
-		this->container[3].set_matrix(0, 0, tmp6_1);
-		this->container[3].set_matrix(1, 0, tmp6_2);
-		this->container[3].set_matrix(2, 0, tmp6_3);
+		this->container[3].set_matrix(0, 0, tmp1_1);
+		this->container[3].set_matrix(1, 0, tmp1_2);
+		this->container[3].set_matrix(2, 0, tmp1_3);
 
-		this->container[1].set_matrix(0, 0, tmp3_1);
-		this->container[1].set_matrix(1, 0, tmp3_2);
-		this->container[1].set_matrix(2, 0, tmp3_3);
+		this->container[1].set_matrix(0, 0, tmp4_1);
+		this->container[1].set_matrix(1, 0, tmp4_2);
+		this->container[1].set_matrix(2, 0, tmp4_3);
 
-		this->container[4].set_matrix(0, 0, tmp1_1);
-		this->container[4].set_matrix(1, 0, tmp1_2);
-		this->container[4].set_matrix(2, 0, tmp1_3);
+		this->container[4].set_matrix(0, 0, tmp6_1);
+		this->container[4].set_matrix(1, 0, tmp6_2);
+		this->container[4].set_matrix(2, 0, tmp6_3);
 
-		this->container[6].set_matrix(2, 2, tmp4_1);
-		this->container[6].set_matrix(1, 2, tmp4_2);
-		this->container[6].set_matrix(0, 2, tmp4_3);
+		this->container[6].set_matrix(2, 2, tmp3_1);
+		this->container[6].set_matrix(1, 2, tmp3_2);
+		this->container[6].set_matrix(0, 2, tmp3_3);
 
 	} // end if side 2
 
@@ -304,21 +521,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		char tmp1_2 = this->container[1].get_matrix(0, 1);
 		char tmp1_3 = this->container[1].get_matrix(0, 0);
 
-		this->container[2].set_matrix(0, 2, tmp1_1);
-		this->container[2].set_matrix(0, 1, tmp1_2);
-		this->container[2].set_matrix(0, 0, tmp1_3);
+		this->container[2].set_matrix(0, 2, tmp6_1);
+		this->container[2].set_matrix(0, 1, tmp6_2);
+		this->container[2].set_matrix(0, 0, tmp6_3);
 
-		this->container[6].set_matrix(0, 2, tmp2_1);
-		this->container[6].set_matrix(0, 1, tmp2_2);
-		this->container[6].set_matrix(0, 0, tmp2_3);
+		this->container[6].set_matrix(0, 2, tmp5_1);
+		this->container[6].set_matrix(0, 1, tmp5_2);
+		this->container[6].set_matrix(0, 0, tmp5_3);
 
-		this->container[5].set_matrix(0, 2, tmp6_1);
-		this->container[5].set_matrix(0, 1, tmp6_2);
-		this->container[5].set_matrix(0, 0, tmp6_3);
+		this->container[5].set_matrix(0, 2, tmp1_1);
+		this->container[5].set_matrix(0, 1, tmp1_2);
+		this->container[5].set_matrix(0, 0, tmp1_3);
 
-		this->container[1].set_matrix(0, 2, tmp5_1);
-		this->container[1].set_matrix(0, 1, tmp5_2);
-		this->container[1].set_matrix(0, 0, tmp5_3);
+		this->container[1].set_matrix(0, 2, tmp2_1);
+		this->container[1].set_matrix(0, 1, tmp2_2);
+		this->container[1].set_matrix(0, 0, tmp2_3);
 
 	} // end if side 3
 
@@ -340,21 +557,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		char tmp6_2 = this->container[6].get_matrix(2, 1);
 		char tmp6_3 = this->container[6].get_matrix(2, 0);
 
-		this->container[2].set_matrix(2, 2, tmp6_1);
-		this->container[2].set_matrix(2, 1, tmp6_2);
-		this->container[2].set_matrix(2, 0, tmp6_3);
+		this->container[2].set_matrix(2, 2, tmp1_1);
+		this->container[2].set_matrix(2, 1, tmp1_2);
+		this->container[2].set_matrix(2, 0, tmp1_3);
 
-		this->container[1].set_matrix(2, 2, tmp2_1);
-		this->container[1].set_matrix(2, 1, tmp2_2);
-		this->container[1].set_matrix(2, 0, tmp2_3);
+		this->container[1].set_matrix(2, 2, tmp5_1);
+		this->container[1].set_matrix(2, 1, tmp5_2);
+		this->container[1].set_matrix(2, 0, tmp5_3);
 
-		this->container[5].set_matrix(2, 2, tmp1_1);
-		this->container[5].set_matrix(2, 1, tmp1_2);
-		this->container[5].set_matrix(2, 0, tmp1_3);
+		this->container[5].set_matrix(2, 2, tmp6_1);
+		this->container[5].set_matrix(2, 1, tmp6_2);
+		this->container[5].set_matrix(2, 0, tmp6_3);
 
-		this->container[6].set_matrix(2, 2, tmp5_1);
-		this->container[6].set_matrix(2, 1, tmp5_2);
-		this->container[6].set_matrix(2, 0, tmp5_3);
+		this->container[6].set_matrix(2, 2, tmp2_1);
+		this->container[6].set_matrix(2, 1, tmp2_2);
+		this->container[6].set_matrix(2, 0, tmp2_3);
 
 	} // end if side 4
 
@@ -376,21 +593,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		char tmp4_2 = this->container[4].get_matrix(1, 0);
 		char tmp4_3 = this->container[4].get_matrix(2, 0);
 
-		this->container[1].set_matrix(2, 2, tmp4_1);
-		this->container[1].set_matrix(1, 2, tmp4_2);
-		this->container[1].set_matrix(0, 2, tmp4_3);
+		this->container[1].set_matrix(2, 2, tmp3_1);
+		this->container[1].set_matrix(1, 2, tmp3_2);
+		this->container[1].set_matrix(0, 2, tmp3_3);
 
-		this->container[3].set_matrix(2, 2, tmp1_1);
-		this->container[3].set_matrix(1, 2, tmp1_2);
-		this->container[3].set_matrix(0, 2, tmp1_3);
+		this->container[3].set_matrix(2, 2, tmp6_1);
+		this->container[3].set_matrix(1, 2, tmp6_2);
+		this->container[3].set_matrix(0, 2, tmp6_3);
 
-		this->container[6].set_matrix(0, 0, tmp3_1);
-		this->container[6].set_matrix(1, 0, tmp3_2);
-		this->container[6].set_matrix(2, 0, tmp3_3);
+		this->container[6].set_matrix(0, 0, tmp4_1);
+		this->container[6].set_matrix(1, 0, tmp4_2);
+		this->container[6].set_matrix(2, 0, tmp4_3);
 
-		this->container[4].set_matrix(0, 0, tmp6_1);
-		this->container[4].set_matrix(1, 0, tmp6_2);
-		this->container[4].set_matrix(2, 0, tmp6_3);
+		this->container[4].set_matrix(0, 0, tmp1_1);
+		this->container[4].set_matrix(1, 0, tmp1_2);
+		this->container[4].set_matrix(2, 0, tmp1_3);
 
 	} // end if side 5
 
@@ -412,21 +629,21 @@ void Cube::RotateSide(unsigned int side, bool cw)
 		char tmp2_2 = this->container[2].get_matrix(1, 0);
 		char tmp2_3 = this->container[2].get_matrix(0, 0);
 
-		this->container[3].set_matrix(0, 0, tmp2_1);
-		this->container[3].set_matrix(0, 1, tmp2_2);
-		this->container[3].set_matrix(0, 2, tmp2_3);
+		this->container[3].set_matrix(0, 0, tmp5_1);
+		this->container[3].set_matrix(0, 1, tmp5_2);
+		this->container[3].set_matrix(0, 2, tmp5_3);
 
-		this->container[5].set_matrix(0, 2, tmp3_1);
-		this->container[5].set_matrix(1, 2, tmp3_2);
-		this->container[5].set_matrix(2, 2, tmp3_3);
+		this->container[5].set_matrix(0, 2, tmp4_1);
+		this->container[5].set_matrix(1, 2, tmp4_2);
+		this->container[5].set_matrix(2, 2, tmp4_3);
 
-		this->container[4].set_matrix(2, 2, tmp5_1);
-		this->container[4].set_matrix(2, 1, tmp5_2);
-		this->container[4].set_matrix(2, 0, tmp5_3);
+		this->container[4].set_matrix(2, 2, tmp2_1);
+		this->container[4].set_matrix(2, 1, tmp2_2);
+		this->container[4].set_matrix(2, 0, tmp2_3);
 
-		this->container[2].set_matrix(2, 0, tmp4_1);
-		this->container[2].set_matrix(1, 0, tmp4_2);
-		this->container[2].set_matrix(0, 0, tmp4_3);
+		this->container[2].set_matrix(2, 0, tmp3_1);
+		this->container[2].set_matrix(1, 0, tmp3_2);
+		this->container[2].set_matrix(0, 0, tmp3_3);
 
 	} // end if side 6
 }

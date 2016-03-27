@@ -30,7 +30,7 @@ int main(int argc, const char * argv[])
         {
             // build a cube
             start.create_cube();
-            start.print_cube();
+            start.pretty_print();
         }
         else if (line.compare(0, 4, "quit") == 0) // end program
         {

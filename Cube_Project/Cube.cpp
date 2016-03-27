@@ -10,6 +10,9 @@
 #include "Side.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 Cube::Cube()
 {
     Side yellow('Y');
@@ -19,12 +22,12 @@ Cube::Cube()
     Side green('G');
     Side red('R');
     
-    container[0] = yellow;
-    container[1] = blue;
-    container[2] = white;
-    container[3] = orange;
-    container[4] = green;
-    container[5] = red;
+    container[0] = white;
+    container[1] = yellow;
+    container[2] = blue;
+    container[3] = green;
+    container[4] = red;
+    container[5] = orange;
 }
 
 void Cube::create_cube()
@@ -36,12 +39,12 @@ void Cube::create_cube()
     Side green('G');
     Side red('R');
     
-    container[0] = yellow;
-    container[1] = blue;
-    container[2] = white;
-    container[3] = orange;
-    container[4] = green;
-    container[5] = red;
+    container[0] = white;
+    container[1] = yellow;
+    container[2] = blue;
+    container[3] = green;
+    container[4] = red;
+    container[5] = orange;
 }
 
 Cube::~Cube()
@@ -63,4 +66,50 @@ void Cube::print_cube()
         }
         std::cout << std::endl;
     }
+}
+
+
+void Cube::pretty_print()
+{
+    cout << "            FRONT SIDE                            " << endl;
+    cout << "            ______________________                " << endl;
+    cout << "           /                     /\\              " << endl;
+    cout << "          /   " << container[2].get_matrix(0,0)  << "     "
+                             << container[2].get_matrix(1,0)  <<
+            "      "         << container[2].get_matrix(2, 0) << "    /  \\             "             << endl;
+    cout << "         /                     / "
+                             << container[4].get_matrix(2,0) << "  \\            "                    << endl;
+    cout << "        /   "   << container[2].get_matrix(0,1) << "     "
+                             << container[2].get_matrix(1,1) << "      "
+                             << container[2].get_matrix(2,1) << "    /      \\           "            << endl;
+    cout << "       /                     / " << container[4].get_matrix(1,0) << "   "
+                             << container[4].get_matrix(2,1) << "  \\          "                      << endl;
+    cout << "      /   "     << container[2].get_matrix(0,2) << "     "
+                             << container[2].get_matrix(1,2) << "      "
+                             << container[2].get_matrix(2,2) << "    /          \\         "          << endl;
+    cout << "     /_____________________/ "
+                             << container[4].get_matrix(0,0) << "   "
+                             << container[4].get_matrix(1,1) << "   "
+                             << container[4].get_matrix(2,2) << "  \\        "                        << endl;
+    cout << "     \\                     \\           /        "                                      << endl;
+    cout << "      \\   "    << container[0].get_matrix(0,0) << "     "
+                             << container[0].get_matrix(1,0) << "      "
+                             << container[0].get_matrix(2,0) << "    \\ "
+                             << container[4].get_matrix(0,1) << "   "
+                             << container[4].get_matrix(1,2) << "   /         "                       << endl;
+    cout << "       \\                     \\       /          "                                      << endl;
+    cout << "        \\   "  << container[0].get_matrix(0,1) << "     "
+                             << container[0].get_matrix(1,1) << "      "
+                             << container[0].get_matrix(2,1) << "    \\ "
+                             << container[4].get_matrix(0,2) << "   /           "                     << endl;
+    cout << "         \\                     \\   /            "                                      << endl;
+    cout << "          \\   " << container[0].get_matrix(0,2) << "     "
+                             << container[0].get_matrix(1,2) << "      "
+                             << container[0].get_matrix(2,2) << "    \\ /             "               << endl;
+    cout << "           ----------------------                 "                                      << endl;
+    
+    
+    cout << endl << endl << endl;
+    cout << "          BACK SIDE                   "                                                  << endl;
+
 }

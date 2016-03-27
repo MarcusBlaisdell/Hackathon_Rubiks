@@ -23,7 +23,7 @@ public:
     
     void create_cube();
     void print_cube();
-    
+    void pretty_print();
     
 };
 

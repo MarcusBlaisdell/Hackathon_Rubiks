@@ -112,22 +112,20 @@ void Cube::pretty_print()
     cout << "          BACK SIDE                   "                                                  << endl;
     
     
-    .___________________.
-                       / \  				 \
-    /   \		   	      \
-    /    	\				   \
-    / 	  	 \                  \
-				/		  \__________________\
-    /	  	 /				     /
-    /         /                   /
-    \	  	   /				   /
-    \	  / 			      /
-				\    /			         /
-    \  /					/
-    \/___________________/
-    
-    
-    
+    cout << "                    .___________________.             " << endl;
+    cout << "                   / \\   " << container[5].get_matrix(0,0) << "	  " << container[5].get_matrix(1,0) << "		" << container[5].get_matrix(2,0) << "    \\             " << endl;
+    cout << "                  /   \\  	              \\            " << endl;
+    cout << "                 /  " << container[1].get_matrix(0,0) << "  \\   " << container[5].get_matrix(0,1) << "     " << container[5].get_matrix(1,1) << "     " << container[5].get_matrix(2,1) << "   \\           " << endl;
+    cout << "                /       \\				    \\          " << endl;
+    cout << "               / " << container[1].get_matrix(0,1) << "	  " << container[1].get_matrix(1,0) << "  \\   " << container[5].get_matrix(0,2) << "    " << container[5].get_matrix(1,2) << "      " << container[5].get_matrix(2,2) << "   \\         " << endl;
+	cout << "			  /		      \\___________________\\        " << endl;
+    cout << "             /	  	" << container[1].get_matrix(1,1) << "   " << container[1].get_matrix(0,2) << "/                   /        " << endl;
+    cout << "            / " << container[1].get_matrix(0,2)  << "      " << container[1].get_matrix(2,1) << "  /  " << container[3].get_matrix(0,0) << "     " << container[3].get_matrix(1,0) << "      " << container[3].get_matrix(2,0) << "   /         " << endl;
+    cout << "             \\ " << container[1].get_matrix(1,2) << "       /  			       /          " << endl;
+    cout << "              \\	      /  " << container[3].get_matrix(0,1) << "     " << container[3].get_matrix(1,1) << "      " << container[3].get_matrix(2,1) << "   /           " << endl;
+    cout << "               \\  " << container[1].get_matrix(2,2) << "  /		  	         /            " << endl;
+    cout << "                \\   /  " << container[3].get_matrix(0,2) << "	   " << container[3].get_matrix(1,2) << "   	  " << container[3].get_matrix(2,2) << " /             " << endl;
+    cout << "                 \\ /___________________/             " << endl;
     
     
     

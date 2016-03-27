@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
         getline(std::cin, line);
         Cube start;
         
-        if (line.compare(0, 5, "start") == 0) // add(student name,student_id)
+        if (line.compare(0, 5, "start") == 0)
         {
             // build a cube
             start.create_cube();

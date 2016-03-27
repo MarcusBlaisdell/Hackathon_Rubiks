@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Cube.h"
 #include "Side.h"
+#include <string>
 
 using std::cout;
 using std::string;
